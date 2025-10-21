@@ -1,0 +1,91 @@
+{
+  "name": "admin",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "lint": "pnpm lint:eslint && pnpm lint:style",
+    "lint:style": "stylelint \"src/**/*.{css,scss,vue}\" --cache --fix",
+    "lint:eslint": "eslint --cache --fix .",
+    "commit": "git-cz",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.0.0",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@types/node": "^24.9.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog-chinese": "^2.3.0",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "lint-staged": "^16.2.5",
+    "postcss-html": "^1.8.0",
+    "postcss-scss": "^4.0.9",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "simple-git-hooks": "^2.13.1",
+    "stylelint": "^16.25.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended-scss": "^16.0.2",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-order": "^7.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "stylelint-scss": "^6.12.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.11",
+    "vue-tsc": "^3.1.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "pnpx commitlint --edit $1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-chinese"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "prettier --write --cache"
+    ],
+    "*.ts": [
+      "eslint --cache --fix",
+      "prettier --write --cache"
+    ],
+    "*.tsx": [
+      "eslint --cache --fix",
+      "prettier --write --cache"
+    ],
+    "*.vue": [
+      "eslint --cache --fix",
+      "stylelint --fix --cache",
+      "prettier --parser=vue --write --cache"
+    ],
+    "*.css": [
+      "stylelint --fix --cache",
+      "prettier --write --cache"
+    ],
+    "*.scss": [
+      "stylelint --fix --cache",
+      "prettier --write --cache"
+    ],
+    "*.md": [
+      "prettier --write  --cache --parser markdown --prose-wrap never"
+    ]
+  }
+}

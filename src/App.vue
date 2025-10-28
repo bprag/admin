@@ -1,12 +1,19 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
-
-const v = ref<number[]>([]);
-v.value.push(1);
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@components/ui/tabs';
 </script>
 
 <template>
-  <div v-for="i in v" :key="i" class="flex h-screen w-screen bg-amber-200">
-    {{ i }}
+  <div class="flex h-screen w-screen items-center justify-center">
+    123
+    <Tabs class="w-[400px]" default-value="account">
+      <TabsList>
+        <TabsTrigger value="account"> Account </TabsTrigger>
+        <TabsTrigger value="password"> Password </TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">
+        Make changes to your account here.
+      </TabsContent>
+      <TabsContent value="password"> Change your password here. </TabsContent>
+    </Tabs>
   </div>
 </template>

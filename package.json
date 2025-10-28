@@ -9,17 +9,24 @@
     "lint": "pnpm lint:eslint && pnpm lint:style",
     "lint:style": "stylelint \"src/**/*.{css,scss,vue}\" --cache --fix",
     "lint:eslint": "eslint --cache --fix .",
+    "lint:format": "prettier --cache --write .",
     "commit": "git-cz",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
+    "@vueuse/core": "^14.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "reka-ui": "^2.6.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
     "vue": "^3.5.22"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.16",
     "@antfu/eslint-config": "^6.0.0",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
+    "@tailwindcss/postcss": "^4.1.16",
     "@types/node": "^24.9.1",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
@@ -32,10 +39,8 @@
     "postcss-html": "^1.8.0",
     "postcss-nesting": "^13.0.2",
     "postcss-preset-env": "^10.4.0",
-    "postcss-scss": "^4.0.9",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
-    "sass-embedded": "^1.93.2",
     "simple-git-hooks": "^2.13.1",
     "stylelint": "^16.25.0",
     "stylelint-config-rational-order": "^0.1.2",
@@ -44,10 +49,10 @@
     "stylelint-config-standard": "^39.0.1",
     "stylelint-order": "^7.0.0",
     "stylelint-prettier": "^5.0.3",
-    "stylelint-scss": "^6.12.1",
     "tailwindcss": "^4.1.16",
     "typescript": "~5.9.3",
     "vite": "^7.1.11",
+    "vite-tsconfig-paths": "^5.1.4",
     "vue-tsc": "^3.1.1"
   },
   "simple-git-hooks": {

@@ -1,9 +1,5 @@
 export default {
-  extends: [
-    'stylelint-config-standard',
-    'stylelint-config-recommended-vue/scss',
-    'stylelint-config-rational-order',
-  ],
+  extends: ['stylelint-config-standard', 'stylelint-config-rational-order'],
   ignoreFiles: ['**/*.{js,ts,jsx,tsx,json,md}'],
   overrides: [
     {
@@ -24,44 +20,13 @@ export default {
         ],
       },
     },
-    {
-      customSyntax: 'postcss-scss',
-      files: ['**/*.scss'],
-    },
   ],
-  plugins: ['stylelint-order', 'stylelint-prettier', 'stylelint-scss'],
+  plugins: ['stylelint-order', 'stylelint-prettier'],
   rules: {
     'at-rule-no-deprecated': null,
     'at-rule-no-unknown': true,
-    'scss/at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: [
-          'extends',
-          'ignores',
-          'include',
-          'mixin',
-          'if',
-          'else',
-          'for',
-          'each',
-          'media',
-          'at-root',
-          'tailwind',
-          'apply',
-          'variants',
-          'responsive',
-          'screen',
-          'function',
-          'use',
-          'forward',
-          'return',
-        ],
-      },
-    ],
     'order/order': [
       [
-        'dollar-variables',
         'custom-properties',
         'at-rules',
         'declarations',

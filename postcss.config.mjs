@@ -1,10 +1,14 @@
-import config from './tailwind.config.mjs';
-
 export default {
   plugins: {
     'postcss-nesting': {},
-    '@tailwindcss/postcss': { config },
-    'postcss-preset-env': {},
-    cssnano: {},
+    '@tailwindcss/postcss': {},
+    'postcss-preset-env': {
+      stage: 3,
+      features: {
+        'nesting-rules': false,
+      },
+    },
+    // eslint-disable-next-line node/prefer-global/process
+    cssnano: process.env.NODE_ENV === 'production' ? {} : false,
   },
 };

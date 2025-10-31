@@ -1,5 +1,6 @@
 export default {
   extends: ['stylelint-config-standard', 'stylelint-config-rational-order'],
+  plugins: ['stylelint-order', 'stylelint-prettier'],
   ignoreFiles: ['**/*.{js,ts,jsx,tsx,json,md}'],
   overrides: [
     {
@@ -21,17 +22,12 @@ export default {
       },
     },
   ],
-  plugins: ['stylelint-order', 'stylelint-prettier'],
   rules: {
     'at-rule-no-deprecated': null,
     'at-rule-no-unknown': true,
+    'import-notation': null,
     'order/order': [
-      [
-        'custom-properties',
-        'at-rules',
-        'declarations',
-        'rules',
-      ],
+      ['custom-properties', 'at-rules', 'declarations', 'rules'],
       { severity: 'error' },
     ],
     'prettier/prettier': true,

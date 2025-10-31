@@ -1,0 +1,12 @@
+/* stylelint-disable */
+@tailwind base;
+
+@layer base {
+  html {
+    @apply bg-background font-sans leading-normal;
+  }
+
+  * {
+    @apply border-border;
+  }
+}

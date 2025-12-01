@@ -3,7 +3,7 @@
 
 @layer base {
   html {
-    @apply bg-background font-sans leading-normal;
+    @apply bg-background text-foreground font-sans leading-normal;
   }
 
   * {

@@ -9,21 +9,20 @@
   --primary-foreground: oklch(20.5% 0 0deg);
 
   /* 次级色调（次按钮 / 辅助元素）/ 文字颜色 */
-
   --secondary: oklch(26.9% 0 0deg);
   --secondary-foreground: oklch(98.5% 0 0deg);
 
   /* 强调色（悬停 / 激活状态）/ 文字颜色 */
-
   --accent: oklch(26.9% 0 0deg);
-  --accent-foreground: oklch(98.5% 0 0deg);
+  --accent-hover: oklch(36% 0.01 0deg);
+  --accent-lighter: oklch(24% 0 0deg);
+  --accent-foreground: oklch(98% 0 0deg);
 
   /* 危险操作颜色（如删除、警告）/ 文字颜色 */
   --destructive: oklch(70.4% 0.191 22.216deg);
   --destructive-foreground: oklch(98.5% 0 0deg);
 
   /* 淡化色（占位符 / 禁用）/ 文字颜色 */
-
   --muted: oklch(26.9% 0 0deg);
   --muted-foreground: oklch(70.8% 0 0deg);
 
@@ -38,7 +37,7 @@
   /* 边框颜色 or 圆角 or 字号 or 阴影 */
   --radius: 16px;
   --text: 16px;
-  --border: oklch(100% 0 0deg / 10%);
+  --border: oklch(27% 0.01 0deg);
   --input: oklch(100% 0 0deg / 15%);
   --ring: oklch(55.6% 0 0deg);
 }

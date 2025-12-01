@@ -4,12 +4,7 @@ import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  plugins: [
-    tsconfigPaths({
-      loose: true,
-    }),
-    vue(),
-  ],
+  plugins: [tsconfigPaths({ loose: true }), vue()],
   build: {
     cssCodeSplit: true,
     rollupOptions: {

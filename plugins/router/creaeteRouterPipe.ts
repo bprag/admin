@@ -71,7 +71,7 @@ function registerGuardHook(
 ) {
   router[hookName](async (to, from, next) => {
     let isNextEnd = false;
-    let end;
+    let end: any;
     const _next: typeof next = (...args: any[]) => {
       isNextEnd = true;
       return next(...(args as Parameters<typeof next>));
@@ -90,8 +90,10 @@ function registerGuardHook(
       if (isNextEnd) {
         return;
       }
+      if (typeof end !== 'undefined') {
+        return _next(end);
+      }
     }
-    return end;
   });
 }
 

@@ -1,18 +1,17 @@
-export const routes = [
-  { path: '/', component: () => import('@/pages/home.vue') },
-  {
-    name: 'pages1',
-    path: '/pages1',
-    component: () => import('@/pages/pages1.vue'),
-  },
-  {
-    name: 'pages2',
-    path: '/pages2',
-    component: () => import('@/pages/pages2.vue'),
-  },
-  {
-    name: 'pages3',
-    path: '/pages3',
-    component: () => import('@/pages/pages3.vue'),
-  },
-];
+const HomeRouter = {
+  path: '/',
+  home: 'home',
+  component: () => import('@/pages/home.vue'),
+};
+const LoginRouter = {
+  path: '/login',
+  home: 'login',
+  component: () => import('@/pages/login.vue'),
+};
+const ErrorRouter = {
+  name: '404',
+  path: '/404',
+  component: () => import('@/pages/404.vue'),
+};
+
+export const routes = [HomeRouter, LoginRouter, ErrorRouter];

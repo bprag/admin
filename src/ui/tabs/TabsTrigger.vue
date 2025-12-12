@@ -18,7 +18,7 @@ const forwardedProps = useForwardProps(delegatedProps);
   <TabsTrigger
     :class="
       cn(
-        'ring-offset-background data-[state=active]:bg-background data-[state=active]:text-foreground inline-flex items-center justify-center whitespace-nowrap rounded-md px-12 py-4 text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow',
+        'ring-offset-background data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-background/5 inline-flex items-center justify-center whitespace-nowrap rounded-md px-12 py-4 text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow',
         props.class,
       )
     "

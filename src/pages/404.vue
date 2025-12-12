@@ -1,5 +1,5 @@
 <script lang="ts" setup></script>
 
-<template>我是page4</template>
+<template>404</template>
 
 <style scoped></style>

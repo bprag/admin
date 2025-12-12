@@ -1,6 +1,5 @@
 import { addDynamicIconSelectors } from '@iconify/tailwind';
 import tailwindcssAnimate from 'tailwindcss-animate';
-import localIcons from './src/assets/svg/icons.json';
 
 function initSpacing() {
   const max = 500;
@@ -13,17 +12,17 @@ function initSpacing() {
 }
 
 export default {
-  content: ['src/**/*.{vue,js,ts,jsx,tsx,html}', './index.html'],
+  content: ['src/**/*.{vue,js,ts,jsx,tsx,html}', './index.html',"./docs/**/*.{md,vue,ts}","./docs/.vitepress/**/*.{js,ts,vue}"],
   prefix: '',
   theme: {
     spacing: initSpacing(),
     fontSize: {
-      xs: ['calc(var(--text,16px)*0.750)', 'calc(1.00*var(--text,16px))'],
-      sm: ['calc(var(--text,16px)*0.875)', 'calc(1.25*var(--text,16px))'],
-      md: ['calc(var(--text,16px)*1.000)', 'calc(1.50*var(--text,16px))'],
-      lg: ['calc(var(--text,16px)*1.125)', 'calc(1.75*var(--text,16px))'],
-      xl: ['calc(var(--text,16px)*1.250)', 'calc(1.75*var(--text,16px))'],
-      '2xl': ['calc(var(--text,16px)*1.500)', 'calc(2*var(--text,16px))'],
+      xs: ['calc(var(--text, 16px) * 0.75)', 'calc(1 * var(--text, 16px))'],
+      sm: ['calc(var(--text, 16px) * 0.875)', 'calc(1.25 * var(--text, 16px))'],
+      md: ['calc(var(--text, 16px) * 1)', 'calc(1.5 * var(--text, 16px))'],
+      lg: ['calc(var(--text, 16px) * 1.125)', 'calc(1.75 * var(--text, 16px))'],
+      xl: ['calc(var(--text, 16px) * 1.25)', 'calc(1.75 * var(--text, 16px))'],
+      '2xl': ['calc(var(--text, 16px) * 1.5)', 'calc(2 * var(--text, 16px))'],
     },
     borderRadius: {
       none: '0px',
@@ -74,50 +73,53 @@ export default {
       black: colors.black,
       white: colors.white,
       background: {
-        DEFAULT: 'var(--background)',
+        DEFAULT: 'oklch(var(--background) / <alpha-value>)',
       },
       foreground: {
-        DEFAULT: 'var(--foreground)',
+        DEFAULT: 'oklch(var(--foreground) / <alpha-value>)',
       },
       primary: {
-        DEFAULT: 'var(--primary)',
-        foreground: 'var(--primary-foreground)',
-        // hover: 'var(--accent-hover)',
-        // lighter: 'has(val(--accent-lighter)',
+        DEFAULT: 'oklch(var(--primary) / <alpha-value>)',
+        foreground: 'oklch(var(--primary-foreground) / <alpha-value>)',
       },
-      accent: {
-        DEFAULT: 'var(--accent)',
-        foreground: 'var(--accent-foreground)',
-      },
-      destructive: {
-        DEFAULT: 'var(--destructive)',
-        foreground: 'var(--destructive-foreground)',
+      secondary: {
+        DEFAULT: 'oklch(var(--secondary) / <alpha-value>)',
+        foreground: 'oklch(var(--secondary-foreground) / <alpha-value>)',
       },
       muted: {
-        DEFAULT: 'var(--muted)',
-        foreground: 'var(--muted-foreground)',
+        DEFAULT: 'oklch(var(--muted) / <alpha-value>)',
+        foreground: 'oklch(var(--muted-foreground) / <alpha-value>)',
+      },
+      accent: {
+        DEFAULT: 'oklch(var(--accent) / <alpha-value>)',
+        foreground: 'oklch(var(--accent-foreground) / <alpha-value>)',
+      },
+      destructive: {
+        DEFAULT: 'oklch(var(--destructive) / <alpha-value>)',
       },
       card: {
-        DEFAULT: 'var(--card)',
-        foreground: 'var(--card-foreground)',
+        DEFAULT: 'oklch(var(--card) / <alpha-value>)',
+        foreground: 'oklch(var(--card-foreground) / <alpha-value>)',
       },
       popover: {
-        DEFAULT: 'var(--popover)',
-        foreground: 'var(--popover-foreground)',
+        DEFAULT: 'oklch(var(--popover) / <alpha-value>)',
+        foreground: 'oklch(var(--popover-foreground) / <alpha-value>)',
       },
       border: {
-        DEFAULT: 'var(--border)',
+        DEFAULT: 'oklch(var(--border))',
       },
       input: {
-        DEFAULT: 'var(--input)',
+        DEFAULT: 'oklch(var(--input))',
       },
-      ring: 'var(--ring)',
+      ring: 'oklch(var(--ring) / <alpha-value>)',
     }),
+    extend: {
+      boxShadow: {
+        out: `0 6px 16px 0 rgb(0 0 0 / 8%),
+          0 3px 6px -4px rgb(0 0 0 / 12%),
+          0 9px 28px 8px rgb(0 0 0 / 5%)`,
+      },
+    },
   },
-  plugins: [
-    tailwindcssAnimate,
-    addDynamicIconSelectors({
-      iconSets: { local: localIcons },
-    }),
-  ],
+  plugins: [tailwindcssAnimate, addDynamicIconSelectors()],
 };

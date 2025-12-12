@@ -15,37 +15,16 @@ let isLatestMenuData = false;
 // ---------------------------
 // TODO 获取最新的菜单信息
 async function getMenuData() {
-  return [
-    {
-      name: 'pages1',
-      path: '/pages1',
-      component: () => import('@/pages/pages1.vue'),
-    },
-    {
-      name: 'pages2',
-      path: '/pages2',
-      component: () => import('@/pages/pages2.vue'),
-    },
-    {
-      name: 'pages3',
-      path: '/pages3',
-      component: () => import('@/pages/pages3.vue'),
-    },
-    {
-      name: 'pages4',
-      path: '/pages4',
-      component: () => import('@/pages/pages4.vue'),
-    },
-  ];
+  return [];
 }
 // TODO 获取菜单是否存在
 async function isMenuExist(route: RouteLocationNormalizedGeneric) {
   return !!route.matched.length;
 }
-const WHITE_LIST = ['/', '/login', '/403', '/404'];
+const WHITE_LIST = ['/', '/auth/login', '/403', '/404'];
 // TODO 是否有登录跳转
 function hasRedirectPath(route: RouteLocationNormalizedGeneric) {
-  return route.path === '/login' && !!route.query.redirect;
+  return route.path.includes('/login') && !!route.query.redirect;
 }
 // TODO 是否有Token
 function hasToken() {
@@ -72,7 +51,7 @@ export function initPermission(router: Routers) {
     hook: 'beforeEach',
     async install(to, _from, next) {
       if (!hasToken()) {
-        return next(`/login?redirect=${encodeURIComponent(to.fullPath)}`);
+        return next(`/auth/login?redirect=${encodeURIComponent(to.fullPath)}`);
       }
     },
   });

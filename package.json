@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
+    "ui:dev": "vitepress dev docs",
     "lint": "pnpm lint:eslint && pnpm lint:style",
     "lint:style": "stylelint \"src/**/*.{css,scss,vue}\" --cache --fix",
     "lint:eslint": "eslint --cache --fix .",
@@ -16,14 +17,17 @@
   "dependencies": {
     "@visactor/vtable": "^1.22.2",
     "@visactor/vue-vtable": "^1.22.2",
+    "@vitepress-demo-preview/component": "^2.6.1",
+    "@vitepress-demo-preview/plugin": "^1.4.1",
     "@vueuse/core": "14.0.0",
+    "@vueuse/shared": "^14.1.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
+    "nprogress": "^0.2.0",
     "reka-ui": "2.6.0",
     "tailwind-merge": "3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "vaul-vue": "0.4.1",
-    "vue": "^3.5.22",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
@@ -33,6 +37,7 @@
     "@iconify/json": "^2.2.403",
     "@iconify/tailwind": "^1.2.0",
     "@types/node": "^24.9.1",
+    "@types/nprogress": "^0.2.3",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
     "autoprefixer": "^10.4.21",
@@ -42,6 +47,7 @@
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "lint-staged": "^16.2.5",
+    "markdown-it-container": "^4.0.0",
     "postcss-html": "^1.8.0",
     "postcss-import": "^16.1.1",
     "postcss-nesting": "^13.0.2",
@@ -60,6 +66,8 @@
     "typescript": "~5.9.3",
     "vite": "^7.1.11",
     "vite-tsconfig-paths": "^5.1.4",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.22",
     "vue-tsc": "^3.1.1"
   },
   "simple-git-hooks": {

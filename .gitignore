@@ -17,6 +17,7 @@ typings/
 .node_repl_history
 .yarn-integrity
 .cache/
+docs/.vitepress/cache
 
 # -------------------------
 # Environment variables

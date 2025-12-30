@@ -22,18 +22,46 @@ export default {
 			]
 		],
 		// subject 最小长度
-		'subject-min-length': [2, 'always', 3],
+		'subject-min-length': [
+			2,
+			'always',
+			3
+		],
 		// subject 最大长度
-		'subject-max-length': [2, 'always', 72],
+		'subject-max-length': [
+			2,
+			'always',
+			72
+		],
 		// scope 可选
-		'scope-empty': [2, 'allow'],
+		'scope-empty': [0],
 		// body 每行长度
-		'body-max-line-length': [2, 'always', 100],
+		'body-max-line-length': [
+			2,
+			'always',
+			100
+		],
 		// footer 每行长度
-		'footer-max-line-length': [2, 'always', 100],
+		'footer-max-line-length': [
+			2,
+			'always',
+			100
+		],
 		// 禁止 type-case 错误
-		'type-case': [2, 'always', 'lower-case'],
+		'type-case': [
+			2,
+			'always',
+			'lower-case'
+		],
 		// 禁止 subject 首字母大写
-		'subject-case': [2, 'never', ['start-case', 'pascal-case', 'upper-case']],
+		'subject-case': [
+			2,
+			'never',
+			[
+				'start-case',
+				'pascal-case',
+				'upper-case'
+			]
+		],
 	}
 };

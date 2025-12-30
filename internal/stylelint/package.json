@@ -1,0 +1,22 @@
+{
+	"name": "@admin/stylelint",
+	"version": "1.0.0",
+	"private": true,
+	"main": "index.mjs",
+	"module": "index.mjs",
+	"exports": {
+		".": {
+			"import": "./index.mjs",
+			"default": "./index.mjs"
+		}
+	},
+	"dependencies": {
+		"stylelint": "catalog:",
+		"stylelint-config-rational-order": "catalog:",
+		"stylelint-config-standard": "catalog:",
+		"stylelint-order": "catalog:",
+		"stylelint-prettier": "catalog:"
+	},
+	"license": "ISC",
+	"packageManager": "pnpm@10.26.2"
+}

@@ -1,0 +1,21 @@
+{
+	"name": "admin",
+	"version": "1.0.0",
+	"type": "module",
+	"private": true,
+	"packageManager": "pnpm@10.26.2",
+	"scripts": {
+		"lint:style": "stylelint \"apps/**/*.{css,scss,vue}\" --cache --fix"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@admin/eslint": "workspace:*",
+		"@admin/prettier": "workspace:*",
+		"@admin/stylelint": "workspace:*",
+		"eslint": "catalog:",
+		"prettier": "catalog:",
+		"stylelint": "catalog:"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"name": "@admin/eslint",
+	"version": "1.0.0",
+	"private": true,
+	"main": "index.js",
+	"module": "index.js",
+	"exports": {
+		".": {
+			"import": "./index.js",
+			"default": "./index.js"
+		}
+	},
+	"dependencies": {
+		"prettier": "catalog:"
+	},
+	"license": "ISC",
+	"packageManager": "pnpm@10.26.2",
+	"devDependencies": {
+		"@antfu/eslint-config": "catalog:",
+		"eslint-config-prettier": "catalog:"
+	}
+}

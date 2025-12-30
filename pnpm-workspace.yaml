@@ -1,0 +1,16 @@
+packages:
+  - internal/*
+  - packages/*
+  - apps/*
+
+catalog:
+  '@antfu/eslint-config': 6.7.3
+  eslint: ^9.39.2
+  eslint-config-prettier: 10.1.8
+  prettier: 3.7.4
+  prettier-plugin-tailwindcss: ^0.7.2
+  stylelint: 16.26.1
+  stylelint-config-rational-order: ^0.1.2
+  stylelint-config-standard: ^39.0.1
+  stylelint-order: ^7.0.1
+  stylelint-prettier: ^5.0.3

@@ -1,0 +1,51 @@
+# -------------------------
+# Dependency directories
+# -------------------------
+node_modules/
+
+# -------------------------
+# TypeScript declaration files
+# -------------------------
+typings/
+
+# -------------------------
+# Cache and temporary files
+# -------------------------
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+.yarn-integrity
+.cache/
+docs/.vitepress/cache
+
+# -------------------------
+# Environment variables
+# -------------------------
+.env
+
+# -------------------------
+# Build output
+# -------------------------
+dist/
+
+# -------------------------
+# Serverless directories
+# -------------------------
+.serverless/
+
+# -------------------------
+# IDE / Editor settings
+# -------------------------
+.idea/
+.vscode/
+
+# -------------------------
+# macOS system files
+# -------------------------
+.DS_Store
+
+# -------------------------
+# Package artifacts
+# -------------------------
+*.tgz

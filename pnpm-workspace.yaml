@@ -5,10 +5,15 @@ packages:
 
 catalog:
   '@antfu/eslint-config': 6.7.3
+  '@commitlint/cli': ^20.2.0
+  '@commitlint/config-conventional': ^20.2.0
+  '@commitlint/types': ^20.2.0
   eslint: ^9.39.2
   eslint-config-prettier: 10.1.8
+  lint-staged: ^16.2.7
   prettier: 3.7.4
   prettier-plugin-tailwindcss: ^0.7.2
+  simple-git-hooks: ^2.13.1
   stylelint: 16.26.1
   stylelint-config-rational-order: ^0.1.2
   stylelint-config-standard: ^39.0.1

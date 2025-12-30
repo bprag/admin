@@ -2,12 +2,11 @@
 	"name": "@admin/prettier",
 	"version": "1.0.0",
 	"private": true,
-	"main": "index.mjs",
-	"module": "index.mjs",
+	"main": "index.ts",
+	"module": "index.ts",
 	"exports": {
 		".": {
-			"import": "./index.mjs",
-			"default": "./index.mjs"
+			"default": "./index.ts"
 		}
 	},
 	"dependencies": {

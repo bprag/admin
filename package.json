@@ -5,6 +5,8 @@
 	"private": true,
 	"packageManager": "pnpm@10.26.2",
 	"scripts": {
+		"prepare": "simple-git-hooks",
+		"catalog": "pnpx codemod pnpm/catalog",
 		"lint:style": "stylelint \"apps/**/*.{css,scss,vue}\" --cache --fix"
 	},
 	"keywords": [],
@@ -14,8 +16,44 @@
 		"@admin/eslint": "workspace:*",
 		"@admin/prettier": "workspace:*",
 		"@admin/stylelint": "workspace:*",
+		"@admin/commitlint": "workspace:*",
+		"@commitlint/cli": "catalog:",
+		"@commitlint/config-conventional": "catalog:",
+		"@commitlint/types": "catalog:",
 		"eslint": "catalog:",
+		"lint-staged": "catalog:",
 		"prettier": "catalog:",
+		"simple-git-hooks": "catalog:",
 		"stylelint": "catalog:"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npx lint-staged",
+		"commit-msg": "npx --no -- commitlint --edit ${1}"
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --cache --fix",
+			"prettier --write --cache"
+		],
+		"*.ts": [
+			"eslint --cache --fix",
+			"prettier --write --cache"
+		],
+		"*.tsx": [
+			"eslint --cache --fix",
+			"prettier --write --cache"
+		],
+		"*.vue": [
+			"eslint --cache --fix",
+			"stylelint --fix --cache",
+			"prettier --parser=vue --write --cache"
+		],
+		"*.css": [
+			"stylelint --fix --cache",
+			"prettier --write --cache"
+		],
+		"*.md": [
+			"prettier --write  --cache --parser markdown --prose-wrap never"
+		]
 	}
 }

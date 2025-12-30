@@ -1,0 +1,20 @@
+{
+	"name": "@admin/commitlint",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"main": "index.js",
+	"module": "index.js",
+	"exports": {
+		".": {
+			"import": "./index.js",
+			"default": "./index.js"
+		}
+	},
+	"license": "ISC",
+	"packageManager": "pnpm@10.26.2",
+	"devDependencies": {
+		"@commitlint/config-conventional": "catalog:",
+		"@commitlint/types": "catalog:"
+	}
+}

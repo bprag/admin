@@ -1,19 +1,16 @@
-# 项目
+# 项目名称
 
-## 推荐环境
+## 推荐环境 (Prerequisites)
 
-```bash
-新版 Visual Studio Code
-安装 .vscode/extensions.json 文件中推荐的插件
-node 18.x 或 18+
-pnpm 8.x 或 8+
-```
+为了确保开发体验一致，建议使用以下环境：
+
+- **IDE**: [Visual Studio Code](https://code.visualstudio.com/)、[webstorm](https://www.jetbrains.com/webstorm/) (最新版)
+- **Runtime**: Node.js 18.x 或 18+
+- **包管理器**: pnpm 8.x 或 8+
 
 ## 整体架构设计
 
-项目由 较新的前端技术架构 组成。
-
-具体项目结构如下：
+本项目基于现代前端技术栈构建。具体项目结构说明如下：
 
 ```bash
 admin/
@@ -119,7 +116,12 @@ refactor(router)
 
 ### 3.3 subject（必填）
 
-提交内容的简要描述：• 使用 现在时• 首字母小写• 不以句号结尾• 不超过 72 个字符
+提交内容的简要描述：
+
+- 使用 现在时
+- 首字母小写
+- 不以句号结尾
+- 不超过 72 个字符
 
 ### 4. 提交体（body，可选）
 
